@@ -6,6 +6,9 @@ from jinja2 import Template
 import sqlite3
 import json
 import hashlib
+import os
+
+api_key = os.environ.get("BETTER_LESSON_SENDMAIL_KEY");
 
 # store template in DB?
 template = Template('Hello {{ name }},<br/><br/>     Thanks for doing this exercise!<br/><br/><a href="{{ url }}">View in browser</a>')
@@ -71,7 +74,7 @@ def index():
 
     # create a request
     headers = {
-        'Authorization': 'Bearer ',
+        'Authorization': 'Bearer ' + api_key,
         'Content-Type': 'application/json',
     }
 

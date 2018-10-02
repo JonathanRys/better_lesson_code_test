@@ -24,6 +24,11 @@ Open a shell
 pipenv shell
 ```
 
+Set an environment variable to your API key
+```
+set BETTER_LESSON_SENDMAIL_KEY=abcxyz123
+```
+
 Run the code
 ```
 python run.py
